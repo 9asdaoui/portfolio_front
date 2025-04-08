@@ -16,7 +16,7 @@ const Footer = () => {
                                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                                                       {/* Logo & Description */}
                                                                       <div className="mb-6 md:mb-0">
-                                                                                    <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center">
+                                                                                    <a href="#Profile" onClick={(e) => { e.preventDefault(); scrollToSection('Profile'); }} className="flex items-center">
                                                                                                   <span className="text-2xl font-bold text-indigo-400">Portfolio</span>
                                                                                     </a>
                                                                                     <p className="mt-3 text-gray-300">
@@ -28,7 +28,7 @@ const Footer = () => {
                                                                       <div>
                                                                                     <h3 className="text-lg font-semibold mb-4 text-indigo-300">Quick Links</h3>
                                                                                     <ul className="space-y-2">
-                                                                                                  <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-gray-300 hover:text-indigo-400 transition duration-300">Home</a></li>
+                                                                                                  <li><a href="#Profile" onClick={(e) => { e.preventDefault(); scrollToSection('Profile'); }} className="text-gray-300 hover:text-indigo-400 transition duration-300">Profile</a></li>
                                                                                                   <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="text-gray-300 hover:text-indigo-400 transition duration-300">About</a></li>
                                                                                                   <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }} className="text-gray-300 hover:text-indigo-400 transition duration-300">Projects</a></li>
                                                                                                   <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }} className="text-gray-300 hover:text-indigo-400 transition duration-300">Skills</a></li>

@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+
 
 const Messages = () => {
 
@@ -9,12 +12,27 @@ const Messages = () => {
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData.entries());
 
-		
-
-
-		console.log('Form Data:', data);
-	
-		e.target.reset();
+		axios.post('http://127.0.0.1:8000/api/messages', data)
+			.then((response) => {
+				e.target.reset();
+				console.log('Message sent successfully:', response.data);
+				Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Message sent successfully!',
+                    confirmButtonColor: '#4F46E5' // Match your indigo color
+                });
+			})
+			.catch((error) => {
+				console.error('Error sending message:', error);
+				Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error sending message. Please try again later.',
+                    confirmButtonColor: '#4F46E5' // Match your indigo color
+                });
+			});	
+				
 	}
 
 	return (
